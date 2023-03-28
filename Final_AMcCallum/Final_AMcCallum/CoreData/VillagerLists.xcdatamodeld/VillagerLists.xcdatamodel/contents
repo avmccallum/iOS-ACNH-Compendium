@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BingoTile" representedClassName="BingoTile" syncable="YES">
+        <attribute name="iconURI" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isPlayed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tileValue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="mode" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="List" representedClassName="List" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="villagers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Villager" inverseName="lists" inverseEntity="Villager"/>
+    </entity>
+    <entity name="Villager" representedClassName="Villager" syncable="YES">
+        <attribute name="api_id" optional="YES" attributeType="String"/>
+        <attribute name="birthDay" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="birthdaySaved" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="birthMonth" optional="YES" attributeType="String"/>
+        <attribute name="catchphrase" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="hobby" optional="YES" attributeType="String"/>
+        <attribute name="houseImgURI" optional="YES" attributeType="String"/>
+        <attribute name="iconURI" optional="YES" attributeType="String"/>
+        <attribute name="imgURI" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="personality" optional="YES" attributeType="String"/>
+        <attribute name="quote" optional="YES" attributeType="String"/>
+        <attribute name="sign" optional="YES" attributeType="String"/>
+        <attribute name="species" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="lists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="villagers" inverseEntity="List"/>
+    </entity>
+    <elements>
+        <element name="BingoTile" positionX="-63" positionY="135" width="128" height="104"/>
+        <element name="Game" positionX="-63" positionY="135" width="128" height="59"/>
+        <element name="List" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Villager" positionX="-54" positionY="9" width="128" height="284"/>
+    </elements>
+</model>
